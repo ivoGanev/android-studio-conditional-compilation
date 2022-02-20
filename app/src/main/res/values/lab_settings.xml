@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="application_name" translatable="false">My Application Name</string>
+    <string name="flavor_name" translatable="false">My Flavor</string>
+    <string name="product_website" translatable="false">http://my-product.com</string>
+</resources>
