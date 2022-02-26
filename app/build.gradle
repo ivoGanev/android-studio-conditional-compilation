@@ -36,20 +36,20 @@ android {
 
     flavorDimensions "main"
     productFlavors {
-        variant_a {
+        variantA {
             dimension "main"
             buildConfigField "boolean", "$BuildSettings.Variants.ANALYTICS_1", "true"
+            buildConfigField "boolean", "$BuildSettings.Variants.EXO_PLAYER", "true"
         }
 
-        variant_b {
+        variantB {
             dimension "main"
             buildConfigField "boolean", "$BuildSettings.Variants.EXO_PLAYER", "true"
             buildConfigField "boolean", "$BuildSettings.Variants.ANALYTICS_2", "true"
         }
 
-        variant_c {
+        variantC {
             dimension "main"
-            buildConfigField "boolean", "$BuildSettings.Variants.EXO_PLAYER", "true"
             buildConfigField "boolean", "$BuildSettings.Variants.ANALYTICS_1", "true"
             buildConfigField "boolean", "$BuildSettings.Variants.ANALYTICS_2", "true"
         }
@@ -62,4 +62,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    variantAImplementation 'com.google.android.exoplayer:exoplayer-core:2.15.1'
+    variantBImplementation 'com.google.android.exoplayer:exoplayer-core:2.7.0'
 }
